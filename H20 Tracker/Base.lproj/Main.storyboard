@@ -1,24 +1,447 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Sq-J7-zRp">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="H20_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS4-va-KBv" userLabel="Water Input">
+                                <rect key="frame" x="15" y="360" width="360" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="bwY-cN-qwz">
+                                        <rect key="frame" x="4" y="4" width="352" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twt-xK-h5d">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Pkb-dS-XkN"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="uxx-VN-51b"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="6 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="smallButtonA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Pa-5z-3C9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgD-3a-o8k">
+                                                <rect key="frame" x="126" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Co6-nt-BaP"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="8 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="smallButtonB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q2Y-dU-DtG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZj-ci-EhR">
+                                                <rect key="frame" x="252" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="cmq-ac-Do1"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="dPT-iZ-QKv"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="12 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="smallButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nci-Gu-00G"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cRi-Mb-iqN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="y04-Vq-epT">
+                                        <rect key="frame" x="4" y="75" width="352" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAO-KX-ki4">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="2TX-TX-BA9"/>
+                                                    <constraint firstAttribute="height" constant="50" id="4vp-jG-rmo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="32 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="medButtonD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UMd-C2-qLP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eh-hj-wBI">
+                                                <rect key="frame" x="126" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Rup-TK-m0g"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="o6A-4e-dZk"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="40 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="medButtonE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPN-kp-mqp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Beu-jO-ZNW">
+                                                <rect key="frame" x="252" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kFw-w6-BWl"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="50 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="medButtonF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UAE-yu-l0c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dBR-El-8b3"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-1O-Pys">
+                                        <rect key="frame" x="4" y="146" width="352" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDF-UR-yXA">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="yyA-ol-tUy"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="80 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="lrgButtonG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11A-Bi-cMf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXD-2i-5yb">
+                                                <rect key="frame" x="126" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3lM-3z-M63"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="tVW-dU-XAv"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="100 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="lrgButtonH:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9se-XQ-zma"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFD-OP-Wua">
+                                                <rect key="frame" x="252" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Blm-y5-yJ7"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Tpc-bA-ifQ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="128 oz">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="lrgButtonI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vey-zz-Gjf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2sr-53-5ZI"/>
+                                            <constraint firstAttribute="width" constant="352" id="prK-ka-3QA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstItem="gCz-1O-Pys" firstAttribute="top" secondItem="y04-Vq-epT" secondAttribute="bottom" constant="21" id="C7q-kK-3ue"/>
+                                    <constraint firstItem="bwY-cN-qwz" firstAttribute="leading" secondItem="nS4-va-KBv" secondAttribute="leading" constant="4" id="ExD-Xb-gcR"/>
+                                    <constraint firstItem="bwY-cN-qwz" firstAttribute="top" secondItem="nS4-va-KBv" secondAttribute="top" constant="4" id="Ibj-mj-24O"/>
+                                    <constraint firstAttribute="trailing" secondItem="gCz-1O-Pys" secondAttribute="trailing" constant="4" id="JXA-a1-Bsh"/>
+                                    <constraint firstAttribute="bottom" secondItem="gCz-1O-Pys" secondAttribute="bottom" constant="4" id="KQw-LI-jfW"/>
+                                    <constraint firstItem="y04-Vq-epT" firstAttribute="leading" secondItem="nS4-va-KBv" secondAttribute="leading" constant="4" id="Kom-CY-5bv"/>
+                                    <constraint firstItem="gCz-1O-Pys" firstAttribute="leading" secondItem="nS4-va-KBv" secondAttribute="leading" constant="4" id="Z01-Jk-mco"/>
+                                    <constraint firstAttribute="trailing" secondItem="bwY-cN-qwz" secondAttribute="trailing" constant="4" id="nMw-Yk-jUs"/>
+                                    <constraint firstAttribute="trailing" secondItem="y04-Vq-epT" secondAttribute="trailing" constant="4" id="rSk-mb-urO"/>
+                                    <constraint firstItem="y04-Vq-epT" firstAttribute="top" secondItem="bwY-cN-qwz" secondAttribute="bottom" constant="21" id="rvW-zA-4On"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDt-HV-17n" userLabel="Water Output">
+                                <rect key="frame" x="16" y="568" width="361" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Consumption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBb-cT-haf">
+                                        <rect key="frame" x="18" y="18" width="143" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="vXk-2V-2KI"/>
+                                            <constraint firstAttribute="height" constant="48" id="vxG-fT-0pt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" systemColor="systemMintColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWG-p5-aPK">
+                                        <rect key="frame" x="50" y="72" width="170" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="COB-mG-Qfa"/>
+                                            <constraint firstAttribute="height" constant="56" id="Fkr-Om-Pgc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" systemColor="systemMintColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set Goal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCF-dC-AgW">
+                                        <rect key="frame" x="229" y="94" width="97" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Onn-nm-bg2"/>
+                                            <constraint firstAttribute="width" constant="97" id="Vxo-kL-HbE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount (Oz)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW5-en-ME6">
+                                        <rect key="frame" x="234" y="31" width="87.333333333333343" height="22"/>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" systemColor="systemMintColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstItem="mBb-cT-haf" firstAttribute="leading" secondItem="UDt-HV-17n" secondAttribute="leadingMargin" constant="10" id="BUM-WK-TE9"/>
+                                    <constraint firstAttribute="trailing" secondItem="CW5-en-ME6" secondAttribute="trailing" constant="26.333333333333371" id="HIn-hy-kbH"/>
+                                    <constraint firstItem="CW5-en-ME6" firstAttribute="top" secondItem="UDt-HV-17n" secondAttribute="top" constant="32" id="Tkk-sI-MQL"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="lCF-dC-AgW" secondAttribute="trailing" constant="27" id="cD2-Cu-rLn"/>
+                                    <constraint firstItem="EWG-p5-aPK" firstAttribute="top" secondItem="mBb-cT-haf" secondAttribute="bottom" constant="6" id="eIQ-o4-jxV"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="lCF-dC-AgW" secondAttribute="bottom" constant="3" id="hZ7-Xi-4SN"/>
+                                    <constraint firstItem="CW5-en-ME6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mBb-cT-haf" secondAttribute="trailing" constant="8" symbolic="YES" id="hdd-38-qiA"/>
+                                    <constraint firstItem="EWG-p5-aPK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UDt-HV-17n" secondAttribute="leading" constant="20" symbolic="YES" id="n7z-Sa-Z1R"/>
+                                    <constraint firstAttribute="bottom" secondItem="EWG-p5-aPK" secondAttribute="bottom" constant="11" id="p2x-y3-o2t"/>
+                                    <constraint firstItem="lCF-dC-AgW" firstAttribute="leading" secondItem="EWG-p5-aPK" secondAttribute="trailing" constant="9" id="rqQ-iB-qAe"/>
+                                    <constraint firstItem="mBb-cT-haf" firstAttribute="top" secondItem="UDt-HV-17n" secondAttribute="topMargin" constant="10" id="vbs-2T-Hus"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcL-ut-HAI">
+                                <rect key="frame" x="71.666666666666671" y="711" width="246.66666666666663" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="YFv-RV-v2Y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Consumption History">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Noteworthy-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="GnP-nb-iuz" kind="show" id="09C-H6-3Qp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H2O Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZL-ud-JFo">
+                                <rect key="frame" x="70.666666666666686" y="82" width="251" height="42"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-BlackItalic" family="Hoefler Text" pointSize="42"/>
+                                <color key="textColor" systemColor="systemCyanColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water bottle" translatesAutoresizingMaskIntoConstraints="NO" id="34e-HZ-Hc0">
+                                <rect key="frame" x="58" y="152" width="275" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="tJG-Y8-Qrg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7Z-Dz-kgs">
+                                <rect key="frame" x="121" y="783" width="148" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="M6v-13-dNA"/>
+                                    <constraint firstAttribute="height" constant="35" id="x90-uN-SIC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Day Complete">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Monaco"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dayEndAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jug-Mb-9hz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UDt-HV-17n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qcL-ut-HAI" secondAttribute="leading" constant="-55.666666666666671" id="1el-kr-BTC"/>
+                            <constraint firstItem="nS4-va-KBv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="360" id="6CO-us-63m"/>
+                            <constraint firstItem="GZL-ud-JFo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-21" id="9V6-6z-h27"/>
+                            <constraint firstItem="c7Z-Dz-kgs" firstAttribute="top" secondItem="qcL-ut-HAI" secondAttribute="bottom" constant="12" id="9cB-uz-AAm"/>
+                            <constraint firstItem="UDt-HV-17n" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DYL-WP-iU2"/>
+                            <constraint firstItem="c7Z-Dz-kgs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="GSp-fl-Wxi"/>
+                            <constraint firstAttribute="bottom" secondItem="nS4-va-KBv" secondAttribute="bottom" constant="292" id="Qnr-tq-ooL"/>
+                            <constraint firstItem="UDt-HV-17n" firstAttribute="top" secondItem="nS4-va-KBv" secondAttribute="bottom" constant="8" symbolic="YES" id="RA2-gr-4PM"/>
+                            <constraint firstItem="qcL-ut-HAI" firstAttribute="top" secondItem="UDt-HV-17n" secondAttribute="bottom" constant="4" id="W87-Rz-doP"/>
+                            <constraint firstItem="qcL-ut-HAI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y4v-hJ-REl"/>
+                            <constraint firstItem="c7Z-Dz-kgs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZCY-u3-EjI"/>
+                            <constraint firstItem="UDt-HV-17n" firstAttribute="centerX" secondItem="34e-HZ-Hc0" secondAttribute="centerX" constant="1" id="a5X-db-OG6"/>
+                            <constraint firstItem="34e-HZ-Hc0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="aBQ-NV-DUG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nS4-va-KBv" secondAttribute="trailing" constant="18" id="aCK-1u-LgJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c7Z-Dz-kgs" secondAttribute="trailing" constant="124" id="fFq-e8-NBd"/>
+                            <constraint firstItem="nS4-va-KBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="gKP-Py-KVV"/>
+                            <constraint firstItem="UDt-HV-17n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ha4-eG-aaq"/>
+                            <constraint firstItem="UDt-HV-17n" firstAttribute="centerX" secondItem="GZL-ud-JFo" secondAttribute="centerX" constant="0.33333333333331439" id="kCa-WD-nAF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UDt-HV-17n" secondAttribute="trailing" constant="16" id="lfD-Us-xMT"/>
+                            <constraint firstItem="nS4-va-KBv" firstAttribute="centerX" secondItem="qcL-ut-HAI" secondAttribute="centerX" id="rdy-2r-7sE"/>
+                            <constraint firstItem="nS4-va-KBv" firstAttribute="top" secondItem="34e-HZ-Hc0" secondAttribute="bottom" constant="8" id="t3X-iD-9d9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qcL-ut-HAI" secondAttribute="trailing" id="x10-Uf-3Cp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="f9N-LC-dku"/>
+                    <connections>
+                        <outlet property="Daycomplete" destination="c7Z-Dz-kgs" id="yzG-Si-pRD"/>
+                        <outlet property="dailyWaterLabel" destination="CW5-en-ME6" id="aro-vJ-b0L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="573.28244274809163" y="-60.563380281690144"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="XIN-5J-smW">
+            <objects>
+                <viewController id="GnP-nb-iuz" customClass="HistoryViewController" customModule="H20_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1UU-iS-rOM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1lR-t3-7pG">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IgA-Lt-jdm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1lR-t3-7pG" firstAttribute="leading" secondItem="IgA-Lt-jdm" secondAttribute="leading" id="PeL-3f-ayJ"/>
+                            <constraint firstItem="IgA-Lt-jdm" firstAttribute="bottom" secondItem="1lR-t3-7pG" secondAttribute="bottom" id="Pv6-xD-6wg"/>
+                            <constraint firstItem="1lR-t3-7pG" firstAttribute="top" secondItem="IgA-Lt-jdm" secondAttribute="top" id="XYw-Hs-uto"/>
+                            <constraint firstItem="IgA-Lt-jdm" firstAttribute="trailing" secondItem="1lR-t3-7pG" secondAttribute="trailing" id="c1q-Fr-cZq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uSZ-Mi-aWf"/>
+                    <connections>
+                        <outlet property="tableView" destination="1lR-t3-7pG" id="YRf-N1-ml4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpn-jK-6RO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="51"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GBs-0B-EpX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Sq-J7-zRp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rni-YT-3a6">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QRF-Gc-2NC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DC6-Vg-mvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="-61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="water bottle" width="275" height="183"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
